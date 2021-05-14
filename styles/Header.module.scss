@@ -1,0 +1,17 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+.header__container {
+  display: none;
+  //only visible on desktop
+  @include xl() {
+    background-color: $color-secondary;
+    display: flex;
+    max-width: 80rem; /* 1280px */
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0.05rem;
+  }
+}

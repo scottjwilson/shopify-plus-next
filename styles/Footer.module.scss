@@ -1,0 +1,34 @@
+@import "abstracts/mixins";
+
+.footer__container {
+  width: 100%;
+  background: #000;
+}
+
+.footer__box {
+  //mx-auto
+  margin-left: auto;
+  margin-right: auto;
+  //px-6
+  padding-left: 1.5rem /* 24px */;
+  padding-right: 1.5rem /* 24px */;
+}
+
+.footer__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__text {
+  p {
+    font-size: 2rem;
+    color: red;
+  }
+  @include sm() {
+    p {
+      font-size: 40px;
+      color: #fff;
+    }
+  }
+}
