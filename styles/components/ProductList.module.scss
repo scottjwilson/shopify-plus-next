@@ -1,0 +1,25 @@
+.productList {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.product {
+  padding: 1rem 0;
+  border-radius: 0.4rem;
+  border: 1px solid #eee;
+  background: #fff;
+  cursor: pointer;
+}
+
+.product__image {
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}

@@ -1,17 +1,36 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+.header {
+  background-color: $color-secondary;
+}
 .header__container {
-  display: none;
-  //only visible on desktop
+  display: flex;
+  max-width: 80rem; /* 1280px */
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 0.05rem;
+
   @include xl() {
-    background-color: $color-secondary;
+  }
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__links {
+  ul {
     display: flex;
-    max-width: 80rem; /* 1280px */
-    align-items: center;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem 0.05rem;
+    list-style: none;
+  }
+  li {
+    padding: 1rem 0.5rem;
+  }
+  a {
+    text-transform: capitalize;
   }
 }
