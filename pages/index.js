@@ -6,7 +6,8 @@ import Layout from "../components/Layout";
 import Hero from "@/components/Hero";
 import ProductList from "@/components/ProductList";
 import heroData from "@/components/heroData";
-export default function Home({ products }) {
+export default function Home({ products, collections }) {
+  console.log(collections);
   return (
     <Layout>
       <Head>
@@ -16,16 +17,20 @@ export default function Home({ products }) {
       </Head>
       <Hero slides={heroData} />
       <ProductList products={products} />
+
+      <h1 className="pypt"></h1>
     </Layout>
   );
 }
 
 export const getServerSideProps = async (context) => {
   const products = await client.product.fetchAll();
+  const collections = await client.collection.fetchAll();
 
   return {
     props: {
       products: JSON.parse(JSON.stringify(products)),
+      collections: JSON.parse(JSON.stringify(collections)),
     },
   };
 };

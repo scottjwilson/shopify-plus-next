@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "@/styles/Header.module.scss";
 import { FaHandScissors } from "react-icons/fa";
-import { linkdata } from "./linkdata";
+import { linkData } from "./linkData";
 export default function Header() {
   return (
     <header className={styles.header}>
@@ -19,7 +19,7 @@ export default function Header() {
         <nav className={styles.header__nav}>
           <div className={styles.header__links}>
             <ul>
-              {linkdata.map((link) => {
+              {linkData.map((link) => {
                 const { id, href } = link;
                 return (
                   <li key={id}>

@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const ProductList = ({ products }) => {
-  console.log(products);
   return (
     <>
-      <h1>featured products</h1>
+      <div className={styles.productList__title}>
+        <h1>featured products</h1>
+      </div>
       <div className={styles.productList}>
         {products.map((product) => (
           <Link href="/about">

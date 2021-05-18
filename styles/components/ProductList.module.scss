@@ -1,9 +1,31 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
 .productList {
-  max-width: 72rem;
-  margin: 0 auto;
+  max-width: $max-w-xl;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include md() {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: $max-w-3xl;
+    padding: 0 1rem;
+  }
+
+  @include lg() {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: $max-w-6xl;
+  }
+}
+
+.productList__title {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product {
